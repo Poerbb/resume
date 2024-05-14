@@ -63,10 +63,9 @@
 <p id="year"></p>
 <p id="university"></p>
 <p id="highschool"></p>
-<p id="year"></p>
+<p id="yearHighSchool"></p>
 <p id="elementary"></p>
-<p id="yearele"></p>
-<p></p>
+<p id="yearElementary"></p>
 
 <h1>Skills</h1>
 <ul id="skills"></ul>
@@ -88,18 +87,17 @@
 </div>
 
 <script>
-    fetch('https://webservice-fa6q.onrender.com/')
+    fetch('http://localhost:3000/')
     .then(response => response.json())
     .then(data => {
         document.getElementById('degree').innerText = data.education.degree;
         document.getElementById('year').innerText = data.education.year;
         document.getElementById('university').innerText = data.education.university;
         document.getElementById('highschool').innerText = data.education.highschool;
-        document.getElementById('year').innerText = data.education.year;
-        document.getElementById('elemenary').innerText = data.education.elementary;
-        document.getElementById('yearele').innerText = data.education.yearele;
+        document.getElementById('yearHighSchool').innerText = data.education.yearHighSchool;
+        document.getElementById('elementary').innerText = data.education.elementary;
+        document.getElementById('yearElementary').innerText = data.education.yearElementary;
         
-
         const skillsList = document.getElementById('skills');
         data.skills.forEach(skill => {
             const li = document.createElement('li');
