@@ -62,6 +62,11 @@
 <h2 id="degree"></h2>
 <p id="year"></p>
 <p id="university"></p>
+<p id="highschool"></p>
+<p id="year"></p>
+<p id="elementary"></p>
+<p id="yearele"></p>
+<p></p>
 
 <h1>Skills</h1>
 <ul id="skills"></ul>
@@ -89,6 +94,11 @@
         document.getElementById('degree').innerText = data.education.degree;
         document.getElementById('year').innerText = data.education.year;
         document.getElementById('university').innerText = data.education.university;
+        document.getElementById('highschool').innerText = data.education.highschool;
+        document.getElementById('year').innerText = data.education.year;
+        document.getElementById('elemenary').innerText = data.education.elementary;
+        document.getElementById('yearele').innerText = data.education.yearele;
+        
 
         const skillsList = document.getElementById('skills');
         data.skills.forEach(skill => {
